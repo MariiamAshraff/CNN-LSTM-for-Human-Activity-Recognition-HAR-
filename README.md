@@ -42,18 +42,16 @@ The implementation reflects concepts from **Sequential Data Modeling** and exten
 
 ## 🏗️ Model Architecture
 
-Input Data (Segmented Structure)
-↓
-TimeDistributed CNN Layers
-↓
-Feature Flattening (per segment)
-↓
-Bidirectional LSTM
-↓
-Dense Layers
-↓
-Softmax Output (6 Classes)
+| Layer / Stage             | Description |
+|---------------------------|------------|
+| **Input Data**            | Segmented structure of features to simulate sequential data |
+| **TimeDistributed CNN**   | Applies CNN to each segment to extract local patterns |
+| **Feature Flattening**    | Flattens CNN output per segment to feed into LSTM |
+| **Bidirectional LSTM**    | Captures temporal dependencies in both directions |
+| **Dense Layers**          | Fully connected layers for learning higher-level representations |
+| **Softmax Output**        | Produces probabilities for 6 activity classes |
 
+---
 
 ---
 
